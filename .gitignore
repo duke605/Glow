@@ -41,3 +41,5 @@ Icon
 bin/
 build/
 eclipse/
+.project
+.classpath
