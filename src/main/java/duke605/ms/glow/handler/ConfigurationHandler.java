@@ -13,6 +13,7 @@ public class ConfigurationHandler {
 	
 	// Configuration Settings
 	public static float defaultGamma;
+	public static int lampRange;
 	
 	public static void initConfig(FMLPreInitializationEvent event) {
 		configFile = new File(event.getModConfigurationDirectory(), "/Micro/Glow.cfg");
@@ -22,6 +23,7 @@ public class ConfigurationHandler {
 		
 		// Getting settings
 		defaultGamma = config.getFloat("defaultBrightness", Configuration.CATEGORY_GENERAL, 0.5F, 0.0F, 1.0F, "What brightness level do you usually play at? This is used to reset the game brightness to normal when Glowstone Goggles are unequipped.");
+		lampRange = config.getInt("lampRange", Configuration.CATEGORY_GENERAL, 8, 8, 32, "Determines how far the Glowstone Lamp's RADIUS is.");
 		
 		config.save();
 	}
