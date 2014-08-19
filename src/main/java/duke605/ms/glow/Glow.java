@@ -10,6 +10,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import duke605.ms.glow.handler.ConfigurationHandler;
 import duke605.ms.glow.handler.EventManager;
 import duke605.ms.glow.lib.GlowTab;
