@@ -15,7 +15,6 @@ import duke605.ms.glow.lib.Reference;
 public class ClientProxy extends CommonProxy {
 
 	public void registerRenderers() {
-		
 		RenderingRegistry.registerBlockHandler(new RenderHandler());
 	}
 }
