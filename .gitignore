@@ -35,11 +35,11 @@ Icon
 .Trashes
 
 
-.git/
-.gradle/
-.settings/
-bin/
-build/
-eclipse/
-.project
-.classpath
+/.git/
+/.gradle/
+/.settings/
+/bin/
+/build/
+/eclipse/
+/.project
+/.classpath*
