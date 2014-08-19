@@ -33,6 +33,7 @@ public class TileEntityGlowstoneLamp extends TileEntity {
 			prevBlock = null;
 		}
 	
+		// Placing ghost block
 		int xOff = MathHelper.getRandomIntegerInRange(worldObj.rand, -RANGE, RANGE);
 		int yOff = MathHelper.getRandomIntegerInRange(worldObj.rand, -RANGE, RANGE);
 		int zOff = MathHelper.getRandomIntegerInRange(worldObj.rand, -RANGE, RANGE);

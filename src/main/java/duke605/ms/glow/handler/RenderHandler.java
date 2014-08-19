@@ -24,6 +24,7 @@ public class RenderHandler implements ISimpleBlockRenderingHandler {
 		// Section 1 - Obby pole
 		rb.setRenderBounds(0.25, 0.2, 0.25, 0.3, 0.8, 0.3);
 		GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
+		GL11.glScalef(1.4F, 1.4F, 1.4F);
 
 		t.startDrawingQuads();
 		t.setNormal(1.0F, 0.0F, 0.0F);
