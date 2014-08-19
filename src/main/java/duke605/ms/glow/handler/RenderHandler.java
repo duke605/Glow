@@ -2,7 +2,9 @@ package duke605.ms.glow.handler;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
@@ -11,8 +13,272 @@ import duke605.ms.glow.lib.Reference;
 public class RenderHandler implements ISimpleBlockRenderingHandler {
 
 	@Override
-	public void renderInventoryBlock(Block block, int metadata, int modelId, RenderBlocks renderer) {
-		
+	public void renderInventoryBlock(Block block, int metadata, int ID, RenderBlocks renderer) {
+		IIcon obsidian = Blocks.obsidian.getIcon(0, metadata);
+		IIcon glass = Blocks.glass.getIcon(0, metadata);
+		IIcon glowstone = Blocks.glowstone.getIcon(0, metadata);
+
+		Tessellator tess = Tessellator.instance;
+
+		renderer.setRenderBounds(0.25D, 0.2D, 0.25D, 0.3D, 0.8D, 0.3D);
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, -1.0F, 0.0F);
+		renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 1.0F, 0.0F);
+		renderer.renderFaceYPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, -1.0F);
+		renderer.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, 1.0F);
+		renderer.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(-1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		renderer.setRenderBounds(0.7, 0.2, 0.7, 0.75, 0.8, 0.75);
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, -1.0F, 0.0F);
+		renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 1.0F, 0.0F);
+		renderer.renderFaceYPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, -1.0F);
+		renderer.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, 1.0F);
+		renderer.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(-1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		renderer.setRenderBounds(0.25, 0.2, 0.7, 0.3, 0.8, 0.75);
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, -1.0F, 0.0F);
+		renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 1.0F, 0.0F);
+		renderer.renderFaceYPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, -1.0F);
+		renderer.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, 1.0F);
+		renderer.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(-1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		renderer.setRenderBounds(0.7, 0.2, 0.25, 0.75, 0.8, 0.3);
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, -1.0F, 0.0F);
+		renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 1.0F, 0.0F);
+		renderer.renderFaceYPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, -1.0F);
+		renderer.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, 1.0F);
+		renderer.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(-1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		// Bottom
+		renderer.setRenderBounds(0.25, 0.15, 0.25, 0.75, 0.2, 0.75);
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, -1.0F, 0.0F);
+		renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 1.0F, 0.0F);
+		renderer.renderFaceYPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, -1.0F);
+		renderer.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, 1.0F);
+		renderer.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(-1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		// Top
+		renderer.setRenderBounds(0.25, 0.8, 0.25, 0.75, 0.85, 0.75);
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, -1.0F, 0.0F);
+		renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 1.0F, 0.0F);
+		renderer.renderFaceYPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, -1.0F);
+		renderer.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, 1.0F);
+		renderer.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(-1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, obsidian);
+		tess.draw();
+
+		// Glass
+		renderer.setRenderBounds(0.26, 0.2, 0.26, 0.74, 0.8, 0.74);
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, -1.0F, 0.0F);
+		renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, glass);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 1.0F, 0.0F);
+		renderer.renderFaceYPos(block, 0.0D, 0.0D, 0.0D, glass);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, -1.0F);
+		renderer.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, glass);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, 1.0F);
+		renderer.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, glass);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(-1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, glass);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, glass);
+		tess.draw();
+
+		// Inner
+		renderer.setRenderBounds(0.3, 0.2, 0.3, 0.7, 0.8, 0.7);
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, -1.0F, 0.0F);
+		renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, glowstone);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 1.0F, 0.0F);
+		renderer.renderFaceYPos(block, 0.0D, 0.0D, 0.0D, glowstone);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, -1.0F);
+		renderer.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, glowstone);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(0.0F, 0.0F, 1.0F);
+		renderer.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, glowstone);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(-1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, glowstone);
+		tess.draw();
+
+		tess.startDrawingQuads();
+		tess.setNormal(1.0F, 0.0F, 0.0F);
+		renderer.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, glowstone);
+		tess.draw();
 	}
 
 	@Override
@@ -85,7 +351,7 @@ public class RenderHandler implements ISimpleBlockRenderingHandler {
 
 	@Override
 	public boolean shouldRender3DInInventory(int modelId) {
-		return false;
+		return true;
 	}
 
 	@Override

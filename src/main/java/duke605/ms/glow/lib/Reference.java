@@ -7,7 +7,7 @@ public class Reference {
 	// Mod Attributes
 	public static final String MODID = "Glow";
 	public static final String NAME = "Glow";
-	public static final String VERSION = "1.0.0.1";
+	public static final String VERSION = "@VERSION@";
 	public static final String DEPENDENCIES = "";
 	public static final String DOMAIN = "glow:";
 	
