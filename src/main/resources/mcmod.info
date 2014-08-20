@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
+  "modid": "Glow",
+  "name": "Glow",
   "description": "Example placeholder mod.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "url": "http://duke605.github.io/",
+  "updateUrl": "http://duke605.github.io/micro-mods/glow/",
+  "authorList": ["Duke605"],
+  "credits": "Ntzrmtthihu777 for helping with rendering and project setup",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

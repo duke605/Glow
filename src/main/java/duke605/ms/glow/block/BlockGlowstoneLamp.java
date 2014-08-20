@@ -23,13 +23,12 @@ public class BlockGlowstoneLamp extends BlockContainer {
 		setBlockBounds(0.25F, 0.15F, 0.25F, 0.75F, 0.85F, 0.75F);
 		GameRegistry.registerTileEntity(TileEntityGlowstoneLamp.class, "glowstoneLamp");
 	}
-	
+
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
 		super.breakBlock(world, x, y, z, block, meta);
 
 		final int RANGE = ConfigurationHandler.lampRange + 5;
 
-		
 		// Removing blocks
 		for (int xCoord = -RANGE;xCoord < RANGE;xCoord++)
 			for (int yCoord = -RANGE;yCoord < RANGE;yCoord++)
@@ -37,11 +36,11 @@ public class BlockGlowstoneLamp extends BlockContainer {
 					if (world.getBlock(x + xCoord, y + yCoord, z + zCoord) == LibBlocks.ghostLight)
 						world.setBlock(x + xCoord, y + yCoord, z + zCoord, Blocks.air);
 	}
-	
+
 	public int getRenderType() {
-        return Reference.LAMP_RENDER_ID;
-    }
-	
+		return Reference.LAMP_RENDER_ID;
+	}
+
 	public boolean renderAsNormalBlock() {
 		return false;
 	}

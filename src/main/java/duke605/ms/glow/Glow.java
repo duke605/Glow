@@ -2,6 +2,7 @@ package duke605.ms.glow;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemArmor;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -44,7 +45,11 @@ public class Glow {
 	public void init(FMLInitializationEvent event) {
 		LibBlocks.initBlocks(); // Loading blocks
 		LibItems.initItems(); // Loading items
-		FMLCommonHandler.instance().bus().register(EventManager.INSTANCE); // Registering event handling
+		
+		// Registering event handling
+		FMLCommonHandler.instance().bus().register(EventManager.INSTANCE); 
+		MinecraftForge.EVENT_BUS.register(EventManager.INSTANCE);
+		
 		proxy.registerRenderers();
 	}
 }

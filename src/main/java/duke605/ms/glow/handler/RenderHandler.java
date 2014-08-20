@@ -25,7 +25,7 @@ public class RenderHandler implements ISimpleBlockRenderingHandler {
 		rb.setRenderBounds(0.25, 0.2, 0.25, 0.3, 0.8, 0.3);
 		GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
 		GL11.glScalef(1.4F, 1.4F, 1.4F);
-
+		
 		t.startDrawingQuads();
 		t.setNormal(1.0F, 0.0F, 0.0F);
 		rb.renderFaceXPos(block, 0, 0, 0, obby);
@@ -229,6 +229,8 @@ public class RenderHandler implements ISimpleBlockRenderingHandler {
 		rb.renderFaceZNeg(block, 0, 0, 0, glow);
 		t.draw();
 
+		GL11.glTranslatef(0.0F, 0.0F, 0.0F);
+		GL11.glScalef(1.0F, 1.0F, 1.0F);
 	}
 
 	@Override

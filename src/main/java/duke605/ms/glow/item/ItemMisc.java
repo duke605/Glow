@@ -21,7 +21,7 @@ public class ItemMisc extends Item {
 
 	@SideOnly(Side.CLIENT)
 	public IIcon[] icons;
-	public final String[] textureNames = {"glowLens"};
+	public final String[] textureNames = {"glowLens", "energeticGlowstoneDust", "energeticGlowstoneLens"};
 
 	public ItemMisc() {
 		setHasSubtypes(true);
@@ -49,4 +49,6 @@ public class ItemMisc extends Item {
 
 	// Item Stacks
 	public static final int GLOW_LENS = 0;
+	public static final int EGD = 1;
+	public static final int EG_LENS = 2;
 }

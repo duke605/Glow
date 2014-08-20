@@ -1,6 +1,7 @@
 itemGroup.glow=Glow
 
 item.misc.glowLens.name=Glow Lens
+item.misc.energeticGlowstoneDust.name=Energetic Glowstone Dust
 item.glowstoneGoggles.name=Glowstone Goggles
 
 tile.phantomLight.name=Phantom Light
