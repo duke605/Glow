@@ -48,7 +48,7 @@ public class ItemGlowstoneGoggles extends ItemArmor {
 	public void getSubItems(Item item, CreativeTabs tab, List l) {
         ItemStack stack = new ItemStack(this);
         stack.setTagCompound(new NBTTagCompound());
-        stack.getTagCompound().setInteger("usage", 40);
+        stack.getTagCompound().setInteger("usage", 1200);
         
         l.add(stack);
     }

@@ -24,7 +24,7 @@ archivesBaseName = "Glow"
 minecraft {
     version    = "1.7.10-10.13.0.1207"
     runDir     = "run"
-	mcpVersion = "9.05"
+	mcpVersion = "9.08"
 	
 	replace      "@VERSION@", project.version
 	replaceIn    "duke605/ms/glow/lib/Reference.java"

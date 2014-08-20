@@ -4,6 +4,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import cpw.mods.fml.common.registry.GameRegistry;
 import duke605.ms.glow.Glow;
 import duke605.ms.glow.item.ItemEnergeticGlowstoneGoggles;
@@ -39,11 +40,18 @@ public class LibItems {
 	}
 	
 	private static void addRecipes() {
+		ItemStack stack;
+		
 		GameRegistry.addRecipe(new ItemStack(misc), new Object[] {" G ", "GPG", " G ", 'G', Items.glowstone_dust, 'P', Blocks.glass_pane});
 		GameRegistry.addRecipe(new ItemStack(misc, 1, ItemMisc.EG_LENS), new Object[] {" G ", "GPG", " G ", 'G', new ItemStack(misc, 1, ItemMisc.EGD), 'P', Blocks.glass_pane});
-		GameRegistry.addRecipe(new ItemStack(glowstoneGoggles), new Object[] {"SLS", "S S", "GLG", 'S', Items.string, 'L', Items.leather, 'G', new ItemStack(misc)});
-		GameRegistry.addRecipe(new ItemStack(energenticGlowstoneGoggles), new Object[] {"SAS", "S S", "GIG", 'S', Items.string, 'a', Items.gold_ingot, 'G', new ItemStack(misc, 1, ItemMisc.EG_LENS), 'I', Items.iron_ingot});
+		GameRegistry.addRecipe(new ItemStack(energenticGlowstoneGoggles), new Object[] {"SAS", "S S", "GIG", 'S', Items.string, 'A', Items.gold_ingot, 'G', new ItemStack(misc, 1, ItemMisc.EG_LENS), 'I', Items.iron_ingot});
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(misc, 1, ItemMisc.EGD), new Object[] {Items.glowstone_dust, Items.blaze_powder, Items.redstone});
+		
+		// Making special recipe
+		stack = new ItemStack(glowstoneGoggles);
+		stack.setTagCompound(new NBTTagCompound());
+		stack.getTagCompound().setInteger("usage", 1200);
+		GameRegistry.addRecipe(stack, new Object[] {"SLS", "S S", "GLG", 'S', Items.string, 'L', Items.leather, 'G', new ItemStack(misc)});
 	}
 }
