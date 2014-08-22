@@ -238,6 +238,7 @@ public class RenderHandler implements ISimpleBlockRenderingHandler {
 		rb.renderAllFaces = true;
 
 		rb.setOverrideBlockTexture(rb.getBlockIcon(Blocks.obsidian));
+		
 		rb.setRenderBounds(0.25, 0.2, 0.25, 0.3, 0.8, 0.3);
 		rb.renderStandardBlock(block, x, y, z);
 
@@ -270,7 +271,7 @@ public class RenderHandler implements ISimpleBlockRenderingHandler {
 
 		// Supports
 		// TOP
-		if (world.getBlock(x, y + 1, z).isSideSolid(world, x, y + 1, z, ForgeDirection.DOWN)) {
+		if (world.getBlock(x, y + 1, z).isSideSolid(world, x, y + 1, z, ForgeDirection.DOWN) || world.getBlock(x, y + 1, z).getRenderType() == Blocks.fence.getRenderType()) {
 			rb.setOverrideBlockTexture(rb.getBlockIcon(Blocks.obsidian));
 
 			// Base
@@ -283,7 +284,7 @@ public class RenderHandler implements ISimpleBlockRenderingHandler {
 		}
 
 		// BOTTOM
-		else if (world.getBlock(x, y - 1, z).isSideSolid(world, x, y - 1, z, ForgeDirection.UP)) {
+		else if (world.getBlock(x, y - 1, z).isSideSolid(world, x, y - 1, z, ForgeDirection.UP) || world.getBlock(x, y - 1, z).getRenderType() == Blocks.fence.getRenderType()) {
 			rb.setOverrideBlockTexture(rb.getBlockIcon(Blocks.obsidian));
 
 			// Base

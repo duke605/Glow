@@ -26,7 +26,7 @@ public class ItemGlowstoneGoggles extends ItemArmor {
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
 		int usage;
 		
-		if (world.isRemote)
+		if (world.isRemote || player == null || player.capabilities.isCreativeMode)
 			return;
 		
 		// Setting tag if stack does not have one		

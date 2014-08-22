@@ -3,7 +3,6 @@ package duke605.ms.glow;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.MinecraftForge;
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -49,7 +48,8 @@ public class Glow {
 		// Registering event handling
 		FMLCommonHandler.instance().bus().register(EventManager.INSTANCE); 
 		MinecraftForge.EVENT_BUS.register(EventManager.INSTANCE);
-		
-		proxy.registerRenderers();
+
+		proxy.registerMod();
+		proxy.registerRenderers(); // Loading renderers
 	}
 }

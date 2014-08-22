@@ -8,7 +8,7 @@ public class Reference {
 	public static final String MODID = "Glow";
 	public static final String NAME = "Glow";
 	public static final String VERSION = "@VERSION@";
-	public static final String DEPENDENCIES = "";
+	public static final String DEPENDENCIES = "required-after:DC1@[3.4.2.19,)";
 	public static final String DOMAIN = "glow:";
 	
 	// Proxies

@@ -2,13 +2,13 @@
 {
   "modid": "Glow",
   "name": "Glow",
-  "description": "Example placeholder mod.",
+  "description": "Adds in new ways to light up your world and make your life just a little brighter. Part of the Micro Series.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "http://duke605.github.io/",
   "updateUrl": "http://duke605.github.io/micro-mods/glow/",
   "authorList": ["Duke605"],
-  "credits": "Ntzrmtthihu777 for helping with rendering and project setup",
+  "credits": "Thanks to Ntzrmtthihu777 and Hotel for program and texture support",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

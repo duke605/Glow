@@ -38,7 +38,15 @@ public class EventManager {
 
 		// Increasing time
 		event.output.getTagCompound().setInteger("usage", Math.min(remain + (amountNeeded * 128), 8192));
-		event.cost = 1;
+		
+		System.out.println(event.name);
+		// Setting name
+		if (event.name.isEmpty())
+			event.cost = 1;
+		else {
+			event.cost = 6;
+			event.output.setStackDisplayName(event.name);
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -69,6 +77,7 @@ public class EventManager {
 	 * @param mc
 	 * @param player
 	 */
+	@SideOnly(Side.CLIENT)
 	private void tickGlowstoneGoggles(Minecraft mc, EntityPlayer player) {
 		ItemStack goggles = player.getCurrentArmor(3);
 
