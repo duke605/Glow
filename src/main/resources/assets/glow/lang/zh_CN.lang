@@ -1,0 +1,10 @@
+itemGroup.glow=萤石工艺
+
+item.misc.glowLens.name=萤石棱镜
+item.misc.energeticGlowstoneLens.name=充能萤石棱镜
+item.misc.energeticGlowstoneDust.name=充能萤石粉
+item.glowstoneGoggles.name=萤石护目镜
+item.energeticGlowstoneGoggles.name=充能萤石护目镜
+
+tile.phantomLight.name=光源
+tile.glowstoneLamp.name=萤石灯
