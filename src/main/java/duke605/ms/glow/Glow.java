@@ -37,7 +37,7 @@ public class Glow {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		ConfigurationHandler.initConfig(event);
+		ConfigurationHandler.initConfig(event);		
 	}
 	
 	@EventHandler
